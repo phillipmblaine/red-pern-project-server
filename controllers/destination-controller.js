@@ -116,4 +116,22 @@ router.delete('/delete/:id', validateSession, (req, res) => {
         .catch((error) => res.status(500).json({ error: error }))
 })
 
+// ******************** ADMIN ONLY ******************** //
+// get all destinations
+router.get('/getalldestinations', validateSession, (req, res) => {
+    switch (req.user.role) {
+        case ('admin'):
+            Destination.findAll()
+                .then(destinations => res.status(200).json(destinations))
+                .catch((error) => res.status(500).json({ error: error }))
+            break;
+        case ('user'):
+            res.status(401).send(`Role: ${req.user.role}. User role detected. Forbidden.`);
+            break;
+        default:
+            res.status(403).send(`Role: ${req.user.role}. Unknown role detected. Forbidden.`)
+            break;
+    }
+})
+
 module.exports = router;
