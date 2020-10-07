@@ -49,7 +49,7 @@ router.post('/create/:tripId', validateSession, (req, res) => {
         .then((destination) => {
             res.status(200).json({
                 destination: destination,
-                message: `Destination created, added to trip with id ${req.params.tripId}.`
+                message: `Destination created. Added to trip with id ${req.params.tripId}.`
             })
         })
         .catch((error) => res.status(500).json({ error: error }))
