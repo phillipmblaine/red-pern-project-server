@@ -29,7 +29,7 @@ router.post('/create', validateSession, (req, res) => {
 })
 
 // get all trips for the current user
-router.get('/getalltrips', validateSession, (req, res) => {
+router.get('/getusertrips', validateSession, (req, res) => {
     Trip.findAll({ where: { userId: req.user.id } })
         .then(trips => res.status(200).json(trips))
         .catch(error => res.status(500).json({ error: error }))
