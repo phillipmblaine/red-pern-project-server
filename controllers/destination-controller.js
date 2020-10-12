@@ -49,14 +49,14 @@ router.post('/create/:tripId', validateSession, (req, res) => {
         .then((destination) => {
             res.status(200).json({
                 destination: destination,
-                message: `Destination created, added to trip with id ${req.params.tripId}.`
+                message: `Destination created. Added to trip with id ${req.params.tripId}.`
             })
         })
         .catch((error) => res.status(500).json({ error: error }))
 })
 
 // get all destinations for current user
-router.get('/getalldestinations', validateSession, (req, res) => {
+router.get('/getuserdestinations', validateSession, (req, res) => {
     Destination.findAll({
         where: { userId: req.user.id }
     })
