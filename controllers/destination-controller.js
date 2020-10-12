@@ -56,7 +56,7 @@ router.post('/create/:tripId', validateSession, (req, res) => {
 })
 
 // get all destinations for current user
-router.get('/getalldestinations', validateSession, (req, res) => {
+router.get('/getuserdestinations', validateSession, (req, res) => {
     Destination.findAll({
         where: { userId: req.user.id }
     })
