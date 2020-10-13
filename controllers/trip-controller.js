@@ -30,14 +30,14 @@ router.post('/create', validateSession, (req, res) => {
 
 // get all trips for the current user
 router.get('/getusertrips', validateSession, (req, res) => {
-    Trip.findAll({ where: { userId: req.user.id } })
+    Trip.findAll({ where: { userId: req.user.id }, include: 'destinations' })
         .then(trips => res.status(200).json(trips))
         .catch(error => res.status(500).json({ error: error }))
 })
 
 // get one trip by id for the current user
 router.get('/gettrip/:id', validateSession, (req, res) => {
-    Trip.findOne({ where: { id: req.params.id, userId: req.user.id } })
+    Trip.findOne({ where: { id: req.params.id, userId: req.user.id }, include: 'destinations' })
         .then(trip => res.status(200).json(trip))
         .catch(error => res.status(500).json({ error: error }))
 })

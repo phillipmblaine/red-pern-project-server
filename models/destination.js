@@ -11,10 +11,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         latitude: {
-            type: DataTypes.INTEGER
+            // type: DataTypes.INTEGER
+            type: DataTypes.DOUBLE
         },
         longitude: {
-            type: DataTypes.INTEGER
+            // type: DataTypes.INTEGER
+            type: DataTypes.DOUBLE
         },
         description: { // not present in geoname call
             type: DataTypes.TEXT
