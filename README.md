@@ -2,7 +2,7 @@
 
 ## Features:
 
-### Heroku Deployment: https://pmb-red-pern-project-client.herokuapp.com/
+## Heroku Deployment: https://pmb-red-pern-project-client.herokuapp.com/
 
 Version 1.0, 2020-10-13
 
@@ -27,49 +27,49 @@ Version 1.0, 2020-10-13
 
 # Getting Started
 
-### 1. Create a user
+## 1. Create a user
 
 ![1-create-user](assets/test-images/1-create-user.png)
 
 <br/>
 
-### 2. Navigate to the destination page (the pin location icon in the navbar).
+## 2. Navigate to the destination page (the pin location icon in the navbar).
 
 ![2-destinations](assets/test-images/2-destinations.png)
 
 <br/>
 
-### 3. Search for a desired destination in the search bar.
+## 3. Search for a desired destination in the search bar.
 
 ![3-search-destination](assets/test-images/3-search-destination.png)
 
 <br/>
 
-### 4. The destination that pops up in the search result may be added with the '+ ADD RESULT TO YOUR DESTINATIONS +' button, which will populate in the table below.
+## 4. The destination that pops up in the search result may be added with the '+ ADD RESULT TO YOUR DESTINATIONS +' button, which will populate in the table below.
 
 ![4-destinations-table](assets/test-images/4-destinations-table.png)
 
 <br/>
 
-### 5. To create a trip, navigate to the trip page (the globe icon in the navbar) and click on the +CREATE NEW TRIP+ button.
+## 5. To create a trip, navigate to the trip page (the globe icon in the navbar) and click on the +CREATE NEW TRIP+ button.
 
 ![5-create-trip](assets/test-images/5-create-trip.png)
 
 <br/>
 
-### 6. If desired, saved destinations may be added to a trip by using the edit destination button in the saved destinations table. To add a trip, use the Trip Assignment menu field.
+## 6. If desired, saved destinations may be added to a trip by using the edit destination button in the saved destinations table. To add a trip, use the Trip Assignment menu field.
 
 ![6-destination-edit](assets/test-images/6-destination-edit.png)
 
 <br/>
 
-### 7. To view a trip's destination collection, click on a trip's 'Destination Info' button in the trip table. Like destinations, trips may also be edited on the trips table.
+## 7. To view a trip's destination collection, click on a trip's 'Destination Info' button in the trip table. Like destinations, trips may also be edited on the trips table.
 
 ![7-trips-table](assets/test-images/7-trips-table.png)
 
 <br/>
 
-### 8. Once trips and/or destinations are created, a general overview of the current user's information is available at the user's home view (the house icon in the navbar).
+## 8. Once trips and/or destinations are created, a general overview of the current user's information is available at the user's home view (the house icon in the navbar).
 
 ![8-home-view](assets/test-images/8-home-view.png)
 
@@ -112,7 +112,7 @@ Version 1.0, 2020-10-13
 
 <br/>
 
-### For Future Versions (Server)
+## For Future Versions (Server)
 
 - Expanded user/admin role privileges
 - More calls from the OpenTripMap API or others with more advanced searching options
@@ -122,7 +122,7 @@ Version 1.0, 2020-10-13
 
 <br/>
 
-### Resources
+# Resources
 
 - https://bezkoder.com/sequelize-associate-one-to-many/
 - https://medium.com/@tonyangelo9707/many-to-many-associations-using-sequelize-941f0b6ac102
@@ -130,6 +130,13 @@ Version 1.0, 2020-10-13
 - https://codehandbook.org/implement-has-many-association-in-sequelize/
 - https://grokonez.com/node-js/sequelize-many-to-many-association-nodejs-express-mysql
 - https://bezkoder.com/sequelize-associate-many-to-many/
+
+<br/>
+
+# Known Issues To Fix
+
+- Inconveniences to user functionality -> when opening an edit entries dialog box at first, the entries start at a blank value. If submitted in this state, blank values can overwrite the current values. Would like to alter the state so that unedited values are defaulted to the previous value.
+- In UserDestinationDisplay.tsx, there is an "any" that I am currently not sure how to specify the datatype.
 
 <br/>
 
@@ -141,27 +148,27 @@ This is still very much a work in progress! I appreciate any suggestions and con
 
 # User Endpoints Sample in Postman
 
-### Admin username20 Register
+## Admin username20 Register
 
 ![admin-username20-register-postman](assets/test-images/admin-username20-register-postman.png)
 
-### Admin username20 Login
+## Admin username20 Login
 
 ![admin-username20-login-postman](assets/test-images/admin-username20-login-postman.png)
 
-### User username22 Register
+## User username22 Register
 
 ![user-username22-register-postman](assets/test-images/user-username22-register-postman.png)
 
-### User username22 Login
+## User username22 Login
 
 ![user-username22-login-postman](assets/test-images/user-username22-login-postman.png)
 
-### User username22 Edit
+## User username22 Edit
 
 ![user-username22-edit-postman](assets/test-images/user-username22-edit-postman.png)
 
-### User username22 Delete
+## User username22 Delete
 
 ![user-username22-delete-postman](assets/test-images/user-username22-delete-postman.png)
 
