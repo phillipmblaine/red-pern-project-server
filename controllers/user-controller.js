@@ -167,7 +167,8 @@ router.put('/edit/:id', validateSession, (req, res) => {
                 firstName: req.body.user.firstName,
                 lastName: req.body.user.lastName,
                 username: req.body.user.username,
-                email: req.body.user.email
+                email: req.body.user.email,
+                role: req.body.user.role
             }
             const query = { where: { id: req.params.id } }
             User.update(updateUser, query)

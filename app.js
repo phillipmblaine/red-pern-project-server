@@ -20,6 +20,4 @@ app.use('/user', user);
 app.use('/trip', trip);
 app.use('/destination', destination);
 
-app.listen(process.env.PORT, function () {
-    console.log(`${process.env.NAME} is listening on port ${process.env.PORT}.`)
-})
+app.listen(process.env.PORT, function () { console.log(`${process.env.NAME} is listening on port ${process.env.PORT}.`) })
